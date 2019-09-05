@@ -1,6 +1,4 @@
 #!/usr/bin/env bash
 
-env
-
 echo "Buildpack wrapper"
 echo 0

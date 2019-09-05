@@ -3,3 +3,10 @@
 echo $1
 echo $2
 echo $3
+
+mkdir -p ${cache_path}/elixir/
+curl -s "https://buildpack-registry.s3.amazonaws.com/buildpacks/hashnuke/elixir.tgz" -o ${cache_path}/elixir/elixir.tgz || exit 1
+current_pwd=$(pwd)
+cd ${cache_path}/elixir/ && tar -xvf elixir.tgz && cd $current_pwd
+
+ls
