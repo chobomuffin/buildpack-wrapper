@@ -5,6 +5,6 @@ mkdir -p $cache_path/elixir/
 curl -s "https://buildpack-registry.s3.amazonaws.com/buildpacks/hashnuke/elixir.tgz" -o $cache_path/elixir/elixir.tgz || exit 1
 tar -xvf $cache_path/elixir/elixir.tgz -C $cache_path/elixir/.
 
-ls
+ls $cache_path
 
 echo "Test Compile"
