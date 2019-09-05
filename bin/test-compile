@@ -1,14 +1,9 @@
 #!/usr/bin/env bash
 
-echo $1
-echo $2
-echo $3
-
-cache_path=$(cd $2 && pwd)
+cache_path=$2
 mkdir -p ${cache_path}/elixir/
 curl -s "https://buildpack-registry.s3.amazonaws.com/buildpacks/hashnuke/elixir.tgz" -o ${cache_path}/elixir/elixir.tgz || exit 1
-current_pwd=$(pwd)
-tar -xvf ${cache_path}/elixir/elixir.tgz -C ${cache_path}/elixir/
+tar -xvf ${cache_path}/elixir/elixir.tgz -C ${cache_path}/elixir/.
 
 ls
 
