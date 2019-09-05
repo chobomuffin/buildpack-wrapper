@@ -5,6 +5,6 @@ mkdir -p $cache_path/elixir/
 curl -s "https://buildpack-registry.s3.amazonaws.com/buildpacks/hashnuke/elixir.tgz" -o $cache_path/elixir/elixir.tgz || exit 1
 tar -xvf $cache_path/elixir/elixir.tgz -C $cache_path/elixir/.
 
-$cache_path/elixir/bin/test-compile "$1" "$2" "$3"
+$cache_path/elixir/bin/test-compile "$1/modron-flow-api" "$2" "$3"
 
 echo "Test Compile"
