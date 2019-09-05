@@ -1,13 +1,15 @@
 #!/usr/bin/env bash
 
-echo $1
-echo $2
-echo $3
+# echo $1
+# echo $2
+# echo $3
 
-cache_path=$(cd $2 && pwd)
-mkdir -p ${cache_path}/elixir/
-curl -s "https://buildpack-registry.s3.amazonaws.com/buildpacks/hashnuke/elixir.tgz" -o ${cache_path}/elixir/elixir.tgz || exit 1
-current_pwd=$(pwd)
-cd ${cache_path}/elixir/ && tar -xvf elixir.tgz && cd $current_pwd
+# cache_path=$(cd $2 && pwd)
+# mkdir -p ${cache_path}/elixir/
+# curl -s "https://buildpack-registry.s3.amazonaws.com/buildpacks/hashnuke/elixir.tgz" -o ${cache_path}/elixir/elixir.tgz || exit 1
+# current_pwd=$(pwd)
+# cd ${cache_path}/elixir/ && tar -xvf elixir.tgz && cd $current_pwd
 
-ls
+# ls
+
+echo "Test Compile"
